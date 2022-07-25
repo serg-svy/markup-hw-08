@@ -1,0 +1,63 @@
+.button-nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+
+  & .link:hover,
+  & .link:focus {
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+  }
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
+}
+
+.button-align {
+  margin-right: 8px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.portfolio-button {
+  color: var(--title-text-color);
+  background-color: var(--secondary-background-color);
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 22px;
+  margin: 0 4px 15px 4px;
+
+  transition: color var(--effect-duration) var(--timing-function),
+    background-color var(--effect-duration) var(--timing-function),
+    box-shadow var(--effect-duration) var(--timing-function);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+    box-shadow: var(--button-shadow);
+  }
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+  }
+}
+
+.button-current {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+}

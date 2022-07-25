@@ -1,0 +1,70 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 500ms var(--timing-function);
+
+  &.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  width: 450px;
+  height: 585px;
+  background-color: var(--primary-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  top: 50%;
+  left: 50%;
+  padding: 40px;
+  transform: translate(-50%, -50%) scale(1);
+
+  transition: transform 500ms var(--timing-function), visibility 500ms var(--timing-function);
+
+  @media screen and (max-width: 479px) {
+    width: 96%;
+    height: 602px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 528px;
+    height: 570px;
+  }
+}
+
+.close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: transparent;
+  height: 30px;
+  top: 8px;
+  right: 8px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.close-icon {
+  fill: currentColor;
+  transition: color var(--effect-duration) var(--timing-function);
+}
